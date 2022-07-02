@@ -1,0 +1,22 @@
+<section id="gigs" class="container">
+    <h1>Books Available</h1>
+
+    {{#each books}}
+      <div class="gig">
+      <h3>{{title}}</h3>
+      <div class="tech">
+          BRANCH: <span>{{branch}}</span>
+      </div>
+      <h4>SEM: {{sem}}</h4>
+      <p>{{description}}</p> 
+      <div class="tech">
+          AUTHOR: <span>{{author}}</span>
+      </div>    
+      <h4>ISDN: {{isdn}}</h4>
+      <a  href="mailto:{{contact_email}}" class="btn" style="margin-top: 10px;">MAIL</a>     
+    </div>
+    {{else}}
+      <p>No books available</p>
+    {{/each}}
+    
+  </section>

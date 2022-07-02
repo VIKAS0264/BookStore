@@ -1,0 +1,46 @@
+<section id="add" class="container">
+    <div class="form-wrap">
+      <h1>Add A book</h1>
+      <p>Your contact email will be shared with registered users</p>
+      {{#each errors}}
+        <div class="error">
+          <p>{{text}}</p>
+        </div>
+      {{/each}}
+      <form action="/books/add" method="POST">
+        <div class="input-group">
+          <label for="title">Book Title</label>
+          <input type="text" name="title" id="title" class="input-box" placeholder="eg. VTU SCANNER DBMS NOTES etc.. "
+            maxlength="100" value={{title}}>
+        </div>
+        <div class="input-group">
+          <label for="branch"></label>
+          <input type="text" name="branch" id="branch" class="input-box" placeholder="eg. CSE ISE MECH"
+          maxlength="100" value={{branch}}>
+        </div>
+        <div class="input-group">
+          <label for="sem">sem</label>
+          <input type="number" name="sem" id="sem" class="input-box" placeholder="eg. 1 2 3 4 5" value={{sem}}>
+        </div>
+        <div class="input-group">
+          <label for="description">Book Description</label>
+          <textarea name="description" id="description" class="input-box" placeholder="Describe the details of the book"
+            rows="10">{{description}}</textarea>
+        </div>
+        <div class="input-group">
+          <label for="author">enter authors name</label>
+          <input type="text" name="author" id="author" class="input-box" placeholder="enter authors name"
+          maxlength="100" value={{author}}>
+        </div>
+        <div class="input-group">
+          <label for="isdn">ISDN</label>
+          <input type="number" name="isdn" id="isdn" class="input-box" placeholder="enter isdn number" value={{isdn}}>
+        </div>
+        <div class="input-group">
+          <label for="budget">Contact Email</label>
+          <input type="email" name="contact_email" id="contactemail" class="input-box" placeholder="Enter an email" value={{contact_email}}>
+        </div>
+        <input type="submit" value="Add book" class="btn btn-reverse">
+      </form>
+    </div>
+  </section>
